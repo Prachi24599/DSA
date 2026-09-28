@@ -19,3 +19,17 @@ function isBigEnough(value){
 }
 const res3 = [23, 4, 56, 34, 11, 9, 8].filter(isBigEnough);
 console.log(res3);
+
+
+//Searching in Array using filter
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
+//filter array items based on search criteria
+function findSimilar(arr, query){
+    // el - each element of the array
+    return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()))
+}
+
+console.log(findSimilar(fruits, "ap"));
+console.log(findSimilar(fruits, "an")); // ['banana', 'mango', 'orange']
+
+
