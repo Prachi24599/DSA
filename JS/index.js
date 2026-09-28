@@ -12,3 +12,10 @@ console.log(res2); // [90]
 console.log(array2); //original array stays as it is
 
 
+
+//Filter small values in the array
+function isBigEnough(value){
+    return value > 10;
+}
+const res3 = [23, 4, 56, 34, 11, 9, 8].filter(isBigEnough);
+console.log(res3);
