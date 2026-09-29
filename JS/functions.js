@@ -66,3 +66,16 @@ console.log(months, "===", replace);
 //remove all from given index
 const removeAll = months.splice(3);
 console.log(months, "===", removeAll);
+
+
+//reverse() - Reverse original array 
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+myFish.reverse();
+console.log(myFish)
+
+
+//concat() = combines array
+const aa = ["A", "B", "C"];
+const nums = [1, 2, 3];
+const ress = aa.concat(nums);//[ 'A', 'B', 'C', 1, 2, 3 ]
+console.log(ress);
