@@ -50,3 +50,19 @@ const animals = ["ant", "bison", "camel", "duck", "elephant"];
 console.log(animals.slice(1, 3)); //["bison", "camel"]
 console.log(animals.slice(2)); //[ 'camel', 'duck', 'elephant' ]
 console.log(animals.slice(2, -1)); // 'camel', 'duck' ]
+
+
+// splice() method of array changes the content inside the array by 
+// REMOVING AND/OR REPLACING the existing values of array AND/OR ADDING
+// 3 ways
+// splice(start) - Remove all the element starting from given index
+// splice(start, deleteCount) - delete the deleteCount number of element from start position
+// splice(start, deleteCount, item1...) - same as above but we add new elements as well
+const months = ["Jan", "abc", "March", "April", "June"];
+const ans = months.splice(4, 0, "May") // [] - It removed 0 element so this array will be empty
+console.log(months, "===", ans);
+const replace = months.splice(1, 1, "Feb");
+console.log(months, "===", replace);
+//remove all from given index
+const removeAll = months.splice(3);
+console.log(months, "===", removeAll);
