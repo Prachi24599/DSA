@@ -32,4 +32,9 @@ function findSimilar(arr, query){
 console.log(findSimilar(fruits, "ap"));
 console.log(findSimilar(fruits, "an")); // ['banana', 'mango', 'orange']
 
-
+//Reduce function -
+//The reduce() method is an iterative method. It runs a "reducer" callback function over all elements in the array,
+//in ascending-index order, and accumulates them into a single value
+const array = [1, 2, 3, 4];
+const result = array.reduce((acc, curr) => acc += curr, 0);
+console.log(result);
