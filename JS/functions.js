@@ -1,0 +1,14 @@
+//find() - Returns the first matching element of an array else undefind if value not found
+const array = [5, 12, 8, 130, 44];
+const val = array.find((item) => item > 200); //Returns undefind If the value does not exist
+console.log(val);
+
+//findIndex - return the index of first element which satisfy the condition otherwise returns -1
+// function greaterThan23(element){
+//     return element > 13;
+// }
+const greaterThan23 = (element) => element > 23;
+// const indexFound = array.findIndex((i) => i > 23);
+const indexFound = array.findIndex(greaterThan23);
+console.log(indexFound);
+
