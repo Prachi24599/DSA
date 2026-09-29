@@ -1,5 +1,5 @@
 //find() - Returns the first matching element of an array else undefind if value not found
-const array = [5, 12, 8, 130, 44];
+const array = [50, 12, 8, 130, 44];
 const val = array.find((item) => item > 200); //Returns undefind If the value does not exist
 console.log(val);
 
@@ -23,3 +23,16 @@ console.log(array.includes(1308))
 //until the callback function returns true
 //If it does not find any element matching the condition it returns false
 console.log(array.some((i) => i % 10 == 0)); //true
+
+//every()
+console.log(array.every((i) => i % 2 == 0)) //true = because all elements are divisible by 2
+
+//push() - add element at the end of the array
+//pop() - remove element from the end of the array
+array.push("ABC");
+array.push("PQR");
+console.log(array);
+array.pop();
+console.log(array);
+
+
