@@ -38,3 +38,25 @@ console.log(findSimilar(fruits, "an")); // ['banana', 'mango', 'orange']
 const array = [1, 2, 3, 4];
 const result = array.reduce((acc, curr) => acc += curr, 0);
 console.log(result);
+
+// Note - The reduce() method does not execute the function for empty array elements.
+
+//Foreach Method - Execute the provided callback function on each element of the array
+const myArray2 = [10, 20, 36, 89, 67, 34];
+myArray2.forEach((i) => {
+    console.log("***", i);
+})
+
+const items = ["item1", "item2", "item3"];
+const copyItems = [];
+// Using simple for
+// for(let i = 0; i< items.length; i++){
+//     copyItems.push(items[i]);
+// }
+// console.log(copyItems);
+
+//Using foreach
+items.forEach((item) => {
+    copyItems.push(item);
+})
+console.log(items);
