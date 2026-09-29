@@ -42,4 +42,11 @@ console.log(array);
 array.shift();
 console.log(array);
 
-
+//slice() - 
+//slice(start)
+//slice(start, end) -It exclude the end
+//-1, -2 .... Index from Back
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+console.log(animals.slice(1, 3)); //["bison", "camel"]
+console.log(animals.slice(2)); //[ 'camel', 'duck', 'elephant' ]
+console.log(animals.slice(2, -1)); // 'camel', 'duck' ]
