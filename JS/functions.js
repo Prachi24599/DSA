@@ -12,3 +12,9 @@ const greaterThan23 = (element) => element > 23;
 const indexFound = array.findIndex(greaterThan23);
 console.log(indexFound);
 
+//indexOf - returns the index of given element from the array
+console.log(array.indexOf(12)); // 1
+
+//includes() - check if the given element is present in the array
+//If yes, returns true else returns false
+console.log(array.includes(1308))
