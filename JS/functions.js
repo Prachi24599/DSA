@@ -79,3 +79,20 @@ const aa = ["A", "B", "C"];
 const nums = [1, 2, 3];
 const ress = aa.concat(nums);//[ 'A', 'B', 'C', 1, 2, 3 ]
 console.log(ress);
+
+//join
+const str = aa.join("");
+console.log(str);
+
+
+//flat() - Flaten the array -> creates a new array with all sub-array elements concatenated 
+//into it recursively up to the specified depth.
+const arr1 = [0, 1, 2, [3, 4]];
+console.log(arr1.flat())
+// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+
+console.log(arr2.flat(2));
+// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+
+console.log(arr2.flat(Infinity));
+// expected output: Array [0, 1, 2, 3, 4, 5]
