@@ -35,4 +35,11 @@ console.log(array);
 array.pop();
 console.log(array);
 
+//unshift() - add element at the beginning
+//shift() - Remove element from the begining
+array.unshift("Pinku");
+console.log(array);
+array.shift();
+console.log(array);
+
 
