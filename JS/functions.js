@@ -18,3 +18,8 @@ console.log(array.indexOf(12)); // 1
 //includes() - check if the given element is present in the array
 //If yes, returns true else returns false
 console.log(array.includes(1308))
+
+//some() - this method calls the callback function ones for each element in the array
+//until the callback function returns true
+//If it does not find any element matching the condition it returns false
+console.log(array.some((i) => i % 10 == 0)); //true
