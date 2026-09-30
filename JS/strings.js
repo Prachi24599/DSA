@@ -14,6 +14,7 @@ console.log(str.replaceAll(" ", "-"));
 console.log(str.split(" ")); //converts string to array
 console.log(str.charAt(6)); //gets the character at given index
 console.log(str.concat(" Independent Woman"));
+console.log(str.substring(2, 8));
 
 
 
