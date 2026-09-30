@@ -42,3 +42,16 @@ console.log(add(...values))
 
 console.log(...values);
 
+//Rest operator = It collects the multiple values into an array
+function addAll(...numbers){
+    return numbers.reduce((sum, num) => sum += num, 0);
+}
+console.log("--", addAll(1, 2, 3, 4, 5))
+
+//Rest in destructuring
+const [firstEle, ...remaining] = [1, 2, 3, 4, 5, 6, 7];
+console.log(firstEle);
+console.log(remaining);
+
+//SPREAD - Expand Values
+//REST - Collects value
