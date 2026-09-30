@@ -20,3 +20,18 @@ console.log(arr);
 //second largest element
 console.log(arr.length);
 console.log(arr[arr.length - 2])
+
+//Find second largest element in the array without sorting
+let arr2 = [11, 52, 20, 8];
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for(const number of arr2){
+    if(number > largest){
+        secondLargest = largest;
+        largest = number;
+    }else if(number > secondLargest && number < largest){
+        secondLargest = number
+    }
+}
+console.log(secondLargest)
