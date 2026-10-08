@@ -133,3 +133,16 @@ function flattenNestedArray(arr) {
   }, []);
 }
 console.log("Using Reduce", flattenNestedArray(nestedArray));
+
+//Find Common Elements between 2 Arrays
+const a1 = [1, 2, 3, 4, 5, 10, 34, 55];
+const a2 = [3, 4, 5, 6, 34, 55];
+
+function findCommon(arr1, arr2){
+    const setB = new Set(a2);
+
+    // const comman = arr1.filter((item) => setB.has(item))
+    // return [...new Set(comman)];
+    return [...new Set(arr1.filter((item) => setB.has(item)))]
+}
+console.log(findCommon(a1, a2));
