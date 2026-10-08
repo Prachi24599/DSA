@@ -39,6 +39,7 @@ console.log(secondLargest)
 //Count Frequency of Elements into array
 const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ]
 //use an object as a frequency map
+//Each Items becomes a key and It's Occurrence count is Incremented
 function countFrequency(arr){
     const frequency = {};
     for(const item of arr){
@@ -53,3 +54,19 @@ function countFrequency(arr){
 }
 
 console.log(countFrequency(fruits));
+
+
+//Find the Missing Number From the Array 
+//This assumes the array contains numbers from 1 through n with exactly one missing.
+const myarray = [1, 2, 3, 5, 6];
+function findMissing(arr){
+    const n = arr.length + 1;
+    console.log("n", n)
+    const expectedSum = (n * (n + 1)) / 2;
+    console.log("expected", expectedSum)
+
+    const actualSum = arr.reduce((acc, curr) => acc += curr, 0)
+    console.log("actual", actualSum)
+    return expectedSum - actualSum;
+}
+console.log(findMissing(myarray));
