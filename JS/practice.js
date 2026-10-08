@@ -35,3 +35,21 @@ for(const number of arr2){
     }
 }
 console.log(secondLargest)
+
+//Count Frequency of Elements into array
+const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ]
+//use an object as a frequency map
+function countFrequency(arr){
+    const frequency = {};
+    for(const item of arr){
+        // if(frequency[item])
+        //     frequency[item] = frequency[item] + 1;
+        // else
+        //     frequency[item] = 1
+
+        frequency[item] = (frequency[item] || 0) + 1;
+    }
+    return frequency;
+}
+
+console.log(countFrequency(fruits));
