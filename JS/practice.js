@@ -70,3 +70,35 @@ function findMissing(arr){
     return expectedSum - actualSum;
 }
 console.log(findMissing(myarray));
+
+//Find Duplicates Elements from the Array
+//Approach 1
+const arrDup = [1, 2, 3, 2, 4, 5, 1];
+function findDuplicate(arr){
+    const track = {};
+    const repeat = [];
+    for(const item of arr){
+        track[item] = (track[item] || 0) + 1;
+    }
+    console.log(track);
+    for(const i in track){
+        track[i] > 1 && repeat.push(Number(i));
+    }
+    return repeat;
+}
+console.log(findDuplicate(arrDup))
+
+//Approach 2 - using set
+function findDuplicateUsingSet(arr){
+    const seen = new Set();
+    const duplicate = new Set();
+    for(const i of arr){
+        if(seen.has(i)){
+            duplicate.add(i);
+        }else{
+            seen.add(i);
+        }
+    }
+    return [...duplicate];
+}
+console.log(findDuplicateUsingSet(arrDup));
