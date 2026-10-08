@@ -102,3 +102,34 @@ function findDuplicateUsingSet(arr){
     return [...duplicate];
 }
 console.log(findDuplicateUsingSet(arrDup));
+
+// Flatten a Nested Array
+const nestedArray = [1, [2, [3, 4]], 5];
+console.log(typeof([1, [2, [3, 4]], 5])); //object
+//So we'll use Array.isArray method to check weather the element is array of not
+function flattenNestedArray(arr){
+    const flatArr = []
+    for(const i of arr){
+        if(Array.isArray(i)){
+            flatArr.push(...flattenNestedArray(i));
+        }else{
+            flatArr.push(i);
+        }
+    }
+    return flatArr;
+}
+console.log(flattenNestedArray(nestedArray));
+
+//using flat() method
+console.log("Using Flat", nestedArray.flat(Infinity));
+
+//Using Reduce
+function flattenNestedArray(arr) {
+  return arr.reduce((result, item) => {
+    const flattenedItem = Array.isArray(item)
+      ? flattenNestedArray(item)
+      : item;
+    return result.concat(flattenedItem);
+  }, []);
+}
+console.log("Using Reduce", flattenNestedArray(nestedArray));
